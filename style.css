@@ -1,0 +1,726 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	font-family: "roboto", sans-serif;
+}
+
+html {
+	font-family: "roboto", sans-serif;
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+p {
+	font-size: 1.6rem;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+section {
+	padding: 5rem 0;
+}
+
+/*header*/
+header {
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.container {
+	width: 100%;
+	max-width: 98rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-brand {
+	width: 2rem;
+}
+.menu-icons i {
+	font-size: 3.5rem;
+	color: #fafafa;
+	cursor: pointer;
+}
+.close i {
+	color: #ff0000;
+}
+
+.nav-list {
+	width: 25rem;
+	height: 100vh;
+	background-color: #f1f1f1;
+	position: fixed;
+	top: 0;
+	right: -26rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1500;
+	transition: all 650ms ease-in-out;
+}
+.nav-list.active {
+	right: 0;
+}
+
+.close {
+	position: absolute;
+	top: 1rem;
+	left: 1.5rem;
+}
+.nav-item {
+	margin: 1.5rem 0;
+}
+.nav-link {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+/*hero*/
+.hero {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.5) 100%
+		),
+		url("image/header.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 4.7rem;
+	background: url("image/wave-small.png") center no-repeat;
+	background-size: cover;
+}
+.hero-intro {
+	width: 100%;
+	max-width: 50rem;
+	color: #fafafa;
+	transform: translateY(20%);
+}
+.hero-intro h3 {
+	font-size: 1.6rem;
+}
+.hero-intro h1 {
+	font-family: "roboto", sans-serif;
+	font-size: 4rem;
+	margin: 1rem 0;
+}
+
+.hero-intro p {
+	text-transform: lowercase;
+}
+.btn {
+	background-color: #000000;
+	border-radius: 2rem;
+	color: #fafafa;
+	display: inline-block;
+	margin-top: 2rem;
+	padding: 1rem 2.5rem;
+	text-transform: uppercase;
+	transition: 650ms;
+}
+.btn:hover {
+	background-color: #272727;
+}
+
+/*sustainability*/
+
+.sustainability {
+	padding: 0;
+}
+
+.title-sustainability {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 10rem;
+	color: rgba(0, 0, 0, 0.7);
+}
+.title-sustainability h3 {
+	font-size: 1.4rem;
+}
+.title-sustainability h1 {
+	font-family: "roboto", sans-serif;
+	font-size: 2rem;
+	margin: 0.5rem 0 1rem;
+}
+.title-sustainability p {
+	text-transform: lowercase;
+}
+
+.sustainability-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 2.5rem;
+}
+.sustainability-grid-item {
+	height: 40rem;
+	padding: 5rem;
+	color: #fafafa;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.sustainability-grid-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 0.7) 0%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
+	z-index: -1;
+}
+
+.ethical-travel {
+	background: url("image/ethical-travel.jpg") center no-repeat;
+}
+
+.local-connections {
+	background: url("image/ethical-travel.jpg") center no-repeat;
+}
+
+.respect-for-nature {
+	background: url("image/ethical-travel.jpg") center no-repeat;
+}
+
+.cultur {
+	background: url("image/ethical-travel.jpg") center no-repeat;
+}
+
+.sustainability-grid-item h1 {
+	font-family: "roboto", sans-serif;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	margin: 2rem 0;
+}
+
+/*practic info*/
+
+.practic-info {
+	width: 100%;
+	height: 88vh;
+	background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0.6) 100%
+		),
+		url("image/practic-info.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.practic-info::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 4.7rem;
+	background: url("image/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+.practic-info-content {
+	width: 100%;
+	color: #fafafa;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.practic-info-text-box {
+	padding: 0 1.5rem;
+	margin-bottom: 2rem;
+}
+.practic-info-text-box h1 {
+	font-family: "roboto", sans-serif;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin: 2rem 0;
+}
+
+.practic-info-text-box h2 {
+	font-family: "roboto", sans-serif;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	margin: 0.5rem 0;
+}
+.practic-info-text-box p {
+	font-family: "roboto", sans-serif;
+	font-size: 1.2rem;
+	text-transform: lowercase;
+	margin: 1rem 0;
+}
+/*Our Hikes*/
+.hikes {
+	display: flex;
+	height: 120rem;
+	justify-content: center;
+	align-items: center;
+	background: #000000;
+	color: #ffffff;
+}
+.hikes h1 {
+	position: absolute;
+	margin-top: -50rem;
+	font-size: 3rem;
+}
+.container-hikes {
+	position: relative;
+	width: 1100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 30px;
+	margin-top: 2rem;
+	color: #ffffff;
+}
+
+.container-hikes .card-hikes {
+	position: relative;
+	max-width: 300px;
+	height: 215px;
+	background: #000000;
+	margin: 30px 10px;
+	padding: 20px 15px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 5px 20px rgba(255, 255, 255, 0.9);
+	transition: 0.3s ease-in-out;
+}
+.container-hikes .card-hikes:hover {
+	height: 420px;
+}
+.container-hikes .card-hikes .imgbox {
+	position: relative;
+	width: 260px;
+	height: 260px;
+	top: -60px;
+	left: 0.6rem;
+}
+.container-hikes .card-hikes .imgbox img {
+	max-width: 100%;
+	border-radius: 4px;
+}
+.container-hikes .card-hikes .content-hikes {
+	position: relative;
+	margin-top: -140px;
+	padding: 10px 15px;
+	text-align: center;
+	color: #ffffff;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+.container-hikes .card-hikes:hover .content-hikes {
+	visibility: visible;
+	opacity: 1;
+	margin-top: -100px;
+	transition-delay: 0.3s;
+	color: #ffffff;
+}
+
+/*produkt-hikes*/
+.product {
+	width: 100%;
+	height: 100%;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	background-color: #000000;
+	padding: 0 1.5rem;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 2px 0.8rem 1rem rgba(0, 0, 0, 0.5);
+	background-color: #ffffff;
+	margin-top: 20rem;
+	margin-bottom: 5rem;
+	z-index: 0;
+}
+
+.product-image {
+	height: 25rem;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+}
+.product-image img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: center no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transition: transform 5s;
+}
+.product-card:hover .product-image img {
+	transform: scale(1.5);
+}
+.product-content {
+	background-color: #fff;
+	padding: 2rem 3rem;
+	position: relative;
+}
+.product-content h2 {
+	font-size: 1.6rem;
+	line-height: 1;
+	padding-bottom: 0.5rem;
+}
+.product-content p {
+	position: relative;
+	font-size: 1.3rem;
+}
+
+.product-content .cta {
+	text-align: right;
+	font-size: bold;
+	margin-top: 1rem;
+}
+.product-content .cta a {
+	background-color: #000000;
+	color: #fff;
+	padding: 1rem 1rem;
+	border-radius: 3rem;
+}
+
+.product-content .cta a:hover {
+	background-color: #5c5c5c;
+	transition: ease-in-out 0.5s;
+}
+
+/*oure guides*/
+.guides-content {
+	padding: 10rme 0;
+	background-color: #000000;
+}
+.our-guides {
+	background-color: #000000;
+}
+.guides-content h1 {
+	text-transform: uppercase;
+	font-size: 3.5rem;
+	letter-spacing: 3px;
+	margin-top: 5rem;
+	margin-right: -3px;
+	margin-bottom: 5rem;
+	text-align: center;
+	color: #ffffff;
+}
+.guides-content p {
+	font-size: 1.5rem;
+	letter-spacing: 1.5px;
+	color: #fff;
+}
+
+.card-wrapper {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+.card {
+	width: 32rem;
+	background-color: #f1f1f1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 5rem 0;
+	box-shadow: 0.5rem 0.5rem 3rem rgb(255, 255, 255, 0.5);
+}
+.our-guides .card-wrapper .card img {
+	width: 15rem;
+	height: 15rem;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-top: -8rem;
+	border: 1px solid #000000;
+}
+.card h3 {
+	font-size: 2.5rem;
+	margin: 1.5rem 0;
+}
+.card h5 {
+	font-size: 1.4rem;
+	margin-bottom: 1.5rem;
+}
+
+/*contact*/
+.contact {
+	background-color: black;
+	background-size: cover;
+	padding: 100px 0;
+}
+.contact h1 {
+	font-size: 4rem;
+	text-align: center;
+	color: #ffffff;
+}
+.border {
+	width: 100px;
+	height: 2px;
+	background: #ffffff;
+	margin: 5px auto;
+}
+
+.contact-form {
+	max-width: 600px;
+	margin: auto;
+	padding: 0 10px;
+	overflow: hidden;
+}
+
+.contact-form-text {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 16px 0;
+	border: 0;
+	background: #ffffff;
+	padding: 20px 40px;
+	outline: none;
+	color: #000000;
+	transition: 0.5s;
+}
+.contact-form-text:hover {
+	box-shadow: 0 0 10px 4px #919191;
+}
+textarea.contact-form-text {
+	resize: none;
+	height: 150px;
+}
+.contact-form-btn {
+	float: right;
+	border: 0;
+	background: #ffffff;
+	color: #000000;
+	padding: 12px 50px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.contact-form-btn:hover {
+	background: #dbdbdb;
+}
+
+/*Footer*/
+footer {
+	padding: 2.5rem 0;
+	background-color: #f1f1f1;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 350px) {
+	.main-message {
+		transform: translateY(40%);
+	}
+}
+@media screen and (min-width: 470px) {
+	.hero::before {
+		height: 9.4rem;
+		background: url("image/wave-medium.png");
+		background-size: cover;
+	}
+	.testimonials::before {
+		height: 9.4rem;
+		background: url("image/wave-medium-reversed.png");
+		background-size: cover;
+	}
+}
+@media screen and (min-width: 700px) {
+	header {
+		height: 8rem;
+	}
+	.nav-brand {
+		width: 3.5rem;
+	}
+	.nav-list {
+		width: initial;
+		height: initial;
+		background-color: transparent;
+		position: initial;
+		top: initial;
+		right: initial;
+		flex-direction: row;
+		transition: initial;
+	}
+	.menu-icons {
+		display: none;
+	}
+
+	.nav-item {
+		margin: 0 2.5rem;
+	}
+	.nav-link,
+	.current {
+		color: #ffffff;
+		position: relative;
+		font-size: 1.3rem;
+	}
+
+	.nav-link::before,
+	.current::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -0.5rem;
+		background-color: #ffffff;
+		width: 100%;
+		height: 2px;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 650ms;
+	}
+	.current::before {
+		transform: scaleX(1);
+	}
+	.nav-link:hover::before {
+		transform: scaleX(1);
+	}
+	.hero {
+		height: 60vh;
+	}
+	.main-message {
+		transform: scaleY(65%);
+	}
+	.title-heading {
+		font-size: 2.5rem;
+	}
+	/*Our Hikes*/
+	.hikes {
+		height: 120rem;
+	}
+	.hikes h1 {
+		margin-top: -45rem;
+	}
+	.container-hikes {
+		margin-top: -10rem;
+	}
+	/*Product/hikes*/
+	.product-card {
+		flex-direction: row;
+		max-height: 75rem;
+	}
+	.product-card h2 {
+		margin-top: 10rem;
+	}
+	.product-card p {
+		padding-bottom: 5rem;
+	}
+	.product-image {
+		flex-basis: 40%;
+		height: unset;
+	}
+
+	.product-content {
+		flex-basis: 60%;
+	}
+	.product-content::before {
+		content: "";
+		width: 3.5rem;
+		height: 100%;
+		background-color: #ffffff;
+		position: absolute;
+		top: 0;
+		left: -1.5rem;
+		z-index: 10;
+		transform: skewX(-5deg);
+	}
+	/*Our Guides*/
+	.card-wrapper {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		margin: 2rem;
+	}
+}
+
+@media screen and (min-width: 950px) {
+	.hero {
+		height: 75vh;
+	}
+	.hero::before {
+		height: 22.7rem;
+		background: url("image/wave-large.png");
+		background-size: cover;
+	}
+	.testimonials::before {
+		height: 22.7rem;
+		background: url("image/wave-large-reversed.png");
+		background-size: cover;
+	}
+	.testimonial-text-box {
+		margin-bottom: -10rem;
+	}
+	/*Our Hikes*/
+	.container-hikes {
+		margin-top: -30rem;
+	}
+	/*Product/hikes*/
+
+	.product-card {
+		flex-direction: row;
+		height: 30rem;
+	}
+	.product-image {
+		flex-basis: 30%;
+		height: unset;
+	}
+
+	.product-content {
+		flex-basis: 80%;
+	}
+}
